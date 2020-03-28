@@ -1,0 +1,126 @@
+[
+  {
+    "initials": "O. Y.",
+    "age": "87",
+    "pets": [
+      {
+        "bird": "Vincent",
+        "pet age": "6"
+      },
+      {
+        "bird": "Silva",
+        "pet age": "7"
+      }
+    ]
+  },
+  {
+    "initials": "F. J.",
+    "age": "73",
+    "pets": [
+      {
+        "cat": "Star",
+        "pet age": "6"
+      },
+      {
+        "fish": "Dorothy",
+        "pet age": "7"
+      },
+      {
+        "bird": "Star",
+        "pet age": "1"
+      }
+    ]
+  },
+  {
+    "initials": "J. E.",
+    "age": "33",
+    "pets": [
+      {
+        "cat": "Ken",
+        "pet age": "2"
+      }
+    ]
+  },
+  {
+    "initials": "I. G.",
+    "age": "74",
+    "pets": [
+      {
+        "bird": "Chan",
+        "pet age": "8"
+      },
+      {
+        "cat": "Pinkie",
+        "pet age": "3"
+      }
+    ]
+  },
+  {
+    "initials": "R. V.",
+    "age": "51",
+    "pets": [
+      {
+        "cat": "Chan",
+        "pet age": "8"
+      },
+      {
+        "cat": "Lucky",
+        "pet age": "3"
+      },
+      {
+        "cat": "Silva",
+        "pet age": "7"
+      }
+    ]
+  },
+  {
+    "initials": "D. G.",
+    "age": "42",
+    "pets": [
+      {
+        "dog": "Silva",
+        "pet age": "5"
+      }
+    ]
+  },
+  {
+    "initials": "J. Y.",
+    "age": "39",
+    "pets": [
+      {
+        "bird": "Chan",
+        "pet age": "1"
+      },
+      {
+        "dog": "Dorothy",
+        "pet age": "9"
+      },
+      {
+        "fish": "Pinkie",
+        "pet age": "3"
+      },
+      {
+        "cat": "Dorothy",
+        "pet age": "7"
+      }
+    ]
+  },
+  {
+    "initials": "J. C.",
+    "age": "31",
+    "pets": [
+      {
+        "bird": "Vincent",
+        "pet age": "6"
+      },
+      {
+        "bird": "Chan",
+        "pet age": "5"
+      },
+      {
+        "dog": "Lucky",
+        "pet age": "5"
+      }
+    ]
+  }
+]

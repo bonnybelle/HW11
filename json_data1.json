@@ -1,0 +1,66 @@
+[
+  {
+    "initials": "E. S.",
+    "age": "63",
+    "pets": [
+      {
+        "fish": "Lucky",
+        "pet age": "9"
+      },
+      {
+        "bird": "Vincent",
+        "pet age": "9"
+      },
+      {
+        "fish": "Star",
+        "pet age": "4"
+      },
+      {
+        "fish": "Dorothy",
+        "pet age": "9"
+      }
+    ]
+  },
+  {
+    "initials": "E. E.",
+    "age": "56",
+    "pets": [
+      {
+        "bird": "Dorothy",
+        "pet age": "6"
+      }
+    ]
+  },
+  {
+    "initials": "U. V.",
+    "age": "52",
+    "pets": [
+      {
+        "cat": "Dorothy",
+        "pet age": "3"
+      },
+      {
+        "cat": "Chan",
+        "pet age": "4"
+      }
+    ]
+  },
+  {
+    "initials": "G. O.",
+    "age": "99",
+    "pets": [
+      {
+        "fish": "Star",
+        "pet age": "1"
+      },
+      {
+        "bird": "Silva",
+        "pet age": "1"
+      },
+      {
+        "bird": "Vincent",
+        "pet age": "7"
+      }
+    ]
+  }
+]

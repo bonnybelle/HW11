@@ -10,6 +10,7 @@
 import json
 import os
 import string
+import fnmatch
 from random import choice, randint
 
 path1 = 'C:/Users/bonny/PycharmProjects/FirstPrj/advanced/HW11/json_data1.json'
@@ -55,13 +56,20 @@ class JsonTasks:
         with open(path3, 'w') as merging_file:
             json.dump(self.clients_list, merging_file, indent=2, ensure_ascii=False)
 
-    def r_path(self, file_name):
-        r_path = os.path.relpath(file_name, start='')
-        return r_path
+    def r_path(self, root, file_name):
+        matches = []
+        for root, directories, files in os.walk(root):
+            for filename in fnmatch.filter(files, file_name):
+                matches.append(os.path.join(filename))
+        return matches
 
-    def absolute_path(self, file_name):
-        abs_path = os.path.abspath(file_name)
-        return abs_path
+    def absolute_path(self, root, file_name):
+        matches = []
+        for root, directories, files in os.walk(root):
+            for filename in fnmatch.filter(files, file_name):
+                matches.append(os.path.join(root, filename).replace('\\', '/'))
+        return matches
+
 
 
 j = JsonTasks()
@@ -71,6 +79,6 @@ print(j.reading(path1))
 print(j.reading(path2))
 # j.merging(path1, path2, path3)
 # print(j.reading(path3))
-# print('Абсолютный путь: ', j.absolute_path('json_data1.json'))
-print('Абсолютный путь: ', j.absolute_path('json_data_merge.json'))
-print('Относительный путь: ', j.r_path('json_data_merge.json'))
+print('Относительный путь: ', j.r_path('C:\\Users\\bonny', 'json_data_merged.json'))
+print('Абсолютный путь: ', j.absolute_path('C:\\Users\\bonny', 'json_data_merged.json'))
+

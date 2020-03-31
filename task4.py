@@ -56,12 +56,25 @@ class JsonTasks:
         with open(path3, 'w') as merging_file:
             json.dump(self.clients_list, merging_file, indent=2, ensure_ascii=False)
 
-    def r_path(self, root, file_name):
-        matches = []
-        for root, directories, files in os.walk(root):
-            for filename in fnmatch.filter(files, file_name):
-                matches.append(os.path.join(filename))
-        return matches
+    def relative_path(self, root, file_name):      # Не знаю, каким ещё способом можно это решить (отн. путь), кроме как
+        temporary_ap = []                          # сравнивать абсолютный путь и текущую директорию, а потом вычитать
+        temporary_cur_dir = []                     # повторяющиеся папки, если они идут последовательно.
+        abs_path = self.absolute_path(root, file_name)
+        current_dir = os.path.abspath(os.curdir)
+        for i in abs_path:
+            for k in i.split('/'):
+                temporary_ap.append(k)
+        for i in current_dir.split('\\'):
+            temporary_cur_dir.append(i)
+        i = 0
+        while i != (len(temporary_cur_dir) - 1) or (len(temporary_ap) - 1):  # Реализация, по идее, происходит тут
+            if temporary_ap[i] == temporary_cur_dir[i]:                      # Но у меня вычитало только первую папку,
+                temporary_ap.pop(i)                                          # то есть 'C:/'.
+                temporary_cur_dir.pop(i)
+                i += 1
+            else:
+                break
+        return '/'.join(temporary_ap)
 
     def absolute_path(self, root, file_name):
         matches = []
@@ -71,7 +84,6 @@ class JsonTasks:
         return matches
 
 
-
 j = JsonTasks()
 j.writing(path1)
 # j.writing(path2)
@@ -79,6 +91,5 @@ print(j.reading(path1))
 print(j.reading(path2))
 # j.merging(path1, path2, path3)
 # print(j.reading(path3))
-print('Относительный путь: ', j.r_path('C:\\Users\\bonny', 'json_data_merged.json'))
+print('Относительный путь: ', j.relative_path('C:\\Users\\bonny', 'json_data_merged.json'))
 print('Абсолютный путь: ', j.absolute_path('C:\\Users\\bonny', 'json_data_merged.json'))
-
